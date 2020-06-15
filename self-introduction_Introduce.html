@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduce</title>
+    <link rel="stylesheet" href="css/self-introduction.css">
+    <link rel="stylesheet" href="js/prefixfree.min.js">
+    <link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <header>
+        <div id="head">My Story</div>
+        <hr>
+    </header>
+    
+    <nav>
+        <div id="mySidenav" class="sidenav2">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="index.html">Main</a>
+            <a href="favorite-Music.html">My favorite<br>_Music</a>
+            <a href="my-loadMap.html">My LoadMap</a>
+        </div>
+        <ul class="sidenav">
+            <div>
+                <span style="cursor:pointer" onclick="openNav()" ><i class="fa fa-bars"></i></span>
+            </div>
+            <a href="self-introduction_Introduce.html">Introduce</a>
+            <a href="self-introduction_Family Matters.html">Family Matters</a>
+            <a href="self-introduction_Character.html">Character</a>
+        </ul>
+    </nav>
+
+    <section id="main">
+            <article class="article1">
+                <div id="PROFILE_block1">
+                    <h1>PROFILE</h1>
+                    <hr>
+                </div>
+                <div id="PROFILE_block2">
+                    <h3>이름<br>생년월일<br>학력정보</h3>
+                </div>
+                <div id="PROFILE_block3">
+                    <p>김도하 KIM DO HA<br>1993.05.09<br>학점은행제 심리학 학사</p>
+                </div>
+            </article>
+            <article class="article2">
+                <div id="PROFILE_block4">
+                    <h1>CONTACT</h1>
+                    <hr>
+                </div>
+                <div id="PROFILE_block5">
+                    <h3>전화번호<br>이메일<br>카카오톡</h3>
+                </div>
+                <div id="PROFILE_block6">
+                    <p>010-0000-0000<br>doha93@naver.com<br>doha93</p>
+                </div>
+
+            </article>
+        </div>
+    </section>
+
+    <footer>
+        <p>http://self-introduction.html</p>
+    </footer>
+
+
+    <script>
+        function openNav() {
+              document.getElementById("mySidenav").style.width = "220px";
+              document.getElementById("main").style.marginLeft = "10px";
+              document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+        }
+
+        function closeNav() {
+              document.getElementById("mySidenav").style.width = "0";
+              document.getElementById("main").style.marginLeft = "0";
+              document.body.style.backgroundColor = "white";
+        }
+
+    </script>
+</body>
+</html>

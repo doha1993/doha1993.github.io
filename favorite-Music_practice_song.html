@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music</title>
+    <link rel="stylesheet" href="css/favorite-Music.css">
+    <link rel="stylesheet" href="js/prefixfree.min.js">
+    <link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <header>
+        <div id="head">My Music</div>
+        <hr>
+    </header>
+    
+    <nav>
+        <div id="mySidenav" class="sidenav2">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="index.html">Main</a>
+            <a href="self-introduction.html">My Introduce</a>
+            <a href="my-loadMap.html">My LoadMap</a>
+        </div>
+        <ul class="sidenav">
+            <div>
+                <span style="cursor:pointer" onclick="openNav()" ><i class="fa fa-bars"></i></span>
+            </div>
+            <a href="favorite-Music_Music videos.html">Music videos</a>
+            <a href="favorite-Music_practice_song.html">My copy <br>practice song</a>
+        </ul>
+    </nav>
+
+    <section id="main">
+            <article class="article1">
+                <div id="MUSIC_block1">
+                    <h1>MY_COPY_MUSIC</h1>
+                    <hr>
+                </div>
+            </article>
+            <article class="article2">
+                <audio src="audio/0725-02.wav" controls></audio>
+                <p>취업을하고 취미로 다시 도전할 계획</p>
+            </article>
+        </div>
+    </section>
+
+    <footer>
+        <p>http://favorite-Music.html</p>
+    </footer>
+
+
+    <script>
+        function openNav() {
+              document.getElementById("mySidenav").style.width = "220px";
+              document.getElementById("main").style.marginLeft = "10px";
+              document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+        }
+
+        function closeNav() {
+              document.getElementById("mySidenav").style.width = "0";
+              document.getElementById("main").style.marginLeft = "0";
+              document.body.style.backgroundColor = "white";
+        }
+
+    </script>
+</body>
+</html>

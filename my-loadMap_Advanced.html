@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>고급자</title>
+    <link rel="stylesheet" href="css/my-loadMap.css">
+    <link rel="stylesheet" href="js/prefixfree.min.js">
+    <link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <header>
+        <div id="head">LoadMap</div>
+        <hr>
+    </header>
+    
+    <nav>
+        <div id="mySidenav" class="sidenav2">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="index.html">Main</a>
+            <a href="self-introduction.html">My Introduce</a>
+            <a href="favorite-Music.html">My favorite<br>_Music</a>
+        </div>
+        <ul class="sidenav">
+            <div>
+                <span style="cursor:pointer" onclick="openNav()" ><i class="fa fa-bars"></i></span>
+            </div>
+            <a href="my-loadMap_Beginner.html">Beginner</a>
+            <a href="my-loadMap_Intermediate.html">Intermediate</a>
+            <a href="my-loadMap_Advanced.html">Advanced</a>
+        </ul>
+    </nav>
+
+    <section id="main">
+            <article>
+            </article>
+        </div>
+    </section>
+
+    <footer>
+        <p>http://127.0.0.1:5500/my-loadMap.html</p>
+    </footer>
+
+
+    <script>
+        function openNav() {
+              document.getElementById("mySidenav").style.width = "220px";
+              document.getElementById("main").style.marginLeft = "10px";
+              document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+        }
+
+        function closeNav() {
+              document.getElementById("mySidenav").style.width = "0";
+              document.getElementById("main").style.marginLeft = "0";
+              document.body.style.backgroundColor = "white";
+        }
+
+    </script>
+</body>
+</html>

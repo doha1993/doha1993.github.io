@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>김도하홈페이지</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="js/prefixfree.min.js">
+    <link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.min.css">
+    <script src="js/jquery-3.5.1.js"></script>
+</head>
+<body>
+    <header>
+        <div id="header">
+            <div class="introduce1">Wellcome</div>
+            <div class="introduce2">To My</div>
+            <div class="introduce3">Java & App</div>
+            <div class="introduce4">Page</div>
+            <div class="introduce5">Programing</div>
+        </div>
+    </header>
+    <section>
+        <div id="main">
+            <div class="bolck1"></div>
+            <div class="bolck2"></div>
+            <div class="bolck3"></div>
+            <div class="bolck4"></div>
+            <div class="bolck5"></div>
+            <div class="bolck6"></div>
+            <div class="bolck7"></div>
+            <div class="bolck8"></div>
+            <header>
+                <div class="control">
+                    <button onclick="document.getElementById('id02').style.display='block'" style="width:auto;"><span>Login</span></button>
+                    
+                    <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;"><span>Sign Up</span></button>
+
+                </div>
+
+                <div id="id01" class="modal">
+                    <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                    <form class="modal-content animate" action="javascript:saveEntry();">
+                        <div class="container">
+                            <h1>Sign Up</h1>
+                            <p>계정을 만들기위해 양식을 작성해주세요.</p>
+                            <hr>
+                            <label for="uname"><b>Username</b></label>
+                            <input type="text" placeholder="Enter Username" id="uname" required>
+
+                            <label for="psw"><b>Password</b></label>
+                            <input type="password" placeholder="Enter Password" id="psw" required>
+
+                            <label for="psw-repeat"><b>Repeat Password</b></label>
+                            <input type="password" placeholder="Repeat Password" id="psw-repeat" required>
+      
+                            <label>
+                                <input type="checkbox" checked="checked" id="remember" style="margin-bottom:15px">  본인이 맞으면 체크하시오.
+                            </label>
+
+                            <p>계정을 만들기 전 <a href="#" style="color:dodgerblue">이용약관</a>에 동의하시오.</p>
+
+                            <div class="clearfix">
+                                <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn"><span>Cancel</span></button>
+                                <button type="submit" class="signupbtn"><span>Sign Up</span></button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div id="id02" class="modal">
+                    <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+                    <form class="modal-content2 animate" action="javascript:loginEntry();">
+                      <div class="container">
+                        <label for="uname"><b>Username</b></label>
+                        <input type="text" placeholder="Enter Username" id="uname2" required>
+                  
+                        <label for="psw"><b>Password</b></label>
+                        <input type="password" placeholder="Enter Password" id="psw2" required>
+                          
+                        <button type="submit"><span>Login</span></button>
+                      </div>
+                  
+                      <div class="clearfix">
+                        <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn2"><span>Cancel</span></button>
+                        <span class="psw">Forgot <a href="#">password?</a></span>
+                      </div>
+                    </form>
+                  </div>
+            </header>
+            <article id="article1" style="display: none;">
+                <div class="head">
+                    <div class="icon1">
+                        <a href="self-introduction.html">
+                            <i class="fa fa-user-circle">
+                            </i>
+                            <p>자기소개</p>
+                        </a>
+                    </div>
+                    <div class="icon2">
+                        <a href="favorite-Music.html">
+                            <i class="fa fa-play-circle">
+                            </i>
+                            <p>좋아하는 음악</p>
+                        </a>
+                    </div>
+                    <div class="icon3">
+                        <a href="my-loadMap.html">
+                            <i class="fa fa-sitemap">
+                            </i>
+                            <p>개발자<br>LoadMap</p>
+                        </a>
+                    </div>
+                </div>
+            </article>
+            <div class="cbolck1"></div>
+            <div class="cbolck2"></div>
+            <div class="cbolck3"></div>
+            <div class="cbolck4"></div>
+            <div class="cbolck5"></div>
+            <div class="cbolck6"></div>
+            <div class="cbolck7"></div>
+            <div class="cbolck8"></div>
+            <div class="cbolck9"></div>
+        </div>
+    </section>
+    <footer>
+        <div class="footerinline">
+            <p>http://127.0.0.1:5500/index.html</p>
+        </div>
+    </footer>
+
+    <script>
+        function saveEntry() {
+            if ($("#psw").val()!=$("#psw-repeat").val()) {
+                alert("비밀번호가 일치하지 않습니다.!");
+                $("#psw,#psw-repeat").val('');
+                return;
+            }
+            var x = {
+                uname:$("#uname").val(),
+                psw:$("#psw").val()
+            }
+            if (localStorage.getItem(x.uname)!=null) {
+                alert("아이디가 중복입니다.");
+                $("#uname, #psw,#psw-repeat").val('');
+                return;
+            }
+            localStorage.setItem(x.uname,x.psw);
+            $("#uname, #psw,#psw-repeat").val('');
+            $("#uname2, #psw2").val('');
+            alert("회원가입이 성공적으로 완료되었습니다.!");
+            var modal = document.getElementById('id01');
+            modal.style.display = "none";
+        };
+        function loginEntry() {
+            if ($("#psw2").val()==localStorage.getItem($("#uname2").val())) {
+                alert("환영합니다 회원님!");
+                $("#uname2, #psw2").val('');
+                var modal = document.getElementById('id02');
+                modal.style.display = "none";
+                var modal2 = document.getElementById('article1');
+                modal2.style.display = "block";
+            }else if(localStorage.getItem($("#uname2").val())==null){
+                alert("입력하신 아이디가 없습니다.!")
+            }
+            else{
+                alert("비밀번호가 맞지않습니다.!");
+                $("#uname2,#psw2").val('');
+                return;
+            }
+        };
+    </script>
+</body>
+</html>
